@@ -1,0 +1,32 @@
+using System;
+
+class ProgramD
+{
+    static void Main()
+    {
+        string senhaCorreta = "1234";
+        bool acertou = false;
+
+        for (int tentativa = 1; tentativa <= 3; tentativa++)
+        {
+            Console.Write("Digite a senha: ");
+            string senha = Console.ReadLine();
+
+            if (senha == senhaCorreta)
+            {
+                Console.WriteLine("Senha correta! Acesso permitido.");
+                acertou = true;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Senha incorreta.");
+            }
+        }
+
+        if (!acertou)
+        {
+            Console.WriteLine("Você excedeu o limite de 3 tentativas.");
+        }
+    }
+}
